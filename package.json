@@ -1,0 +1,24 @@
+{
+  "name": "nodejs_microservice_rpc_communication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "customer": "nodemon src/customer.js",
+    "product": "nodemon src/product.js",
+    "start": "concurrently --kill-others \"npm run customer\" \"npm run product\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.5",
+    "express": "^4.21.2",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "nodemon": "^3.1.9"
+  }
+}
